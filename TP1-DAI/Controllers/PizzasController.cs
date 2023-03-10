@@ -7,15 +7,27 @@ namespace Pizzas.API.Controllers{
         [HttpGet]
         public IActionResult GetAll()
         {
-            List<Pizzas> lista = BD.ListarPizzas();
+            List<Pizza> lista = BD.ListarPizzas();
             return Ok(lista);
         }
 
         [HttpGet("{id}")]
-         public IActionResult GetById(int id)
-         {
-            
-         }
+        public IActionResult GetById(int Id)
+        {
+            if (Id < 1)
+            {
+                return BadRequest ();
+            }
+            Pizza pizzas = BD.VerInfoPizza (Id);
+            if (pizzas == null)
+            {
+                return NotFound();
+            }
+            return Ok(pizzas);
+
+        }
+
+        
     }
     
 

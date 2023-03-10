@@ -1,6 +1,6 @@
 namespace Pizzas.Models
 {
-    public class Pizzas{
+    public class Pizza{
 
     private int _id;
     private string _nombre;
