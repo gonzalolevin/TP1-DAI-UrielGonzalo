@@ -27,6 +27,13 @@ namespace Pizzas.API.Controllers{
 
         }
 
+        [HttpPost]
+        public IActionResult Create (Pizza pizzas)
+        {
+            BD.CrearPizza(pizzas);
+            return Ok();
+        }
+
         
     }
     

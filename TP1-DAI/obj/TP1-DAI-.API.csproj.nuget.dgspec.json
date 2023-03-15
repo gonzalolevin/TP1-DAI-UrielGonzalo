@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\47296055\\Documents\\TP1-DAI\\TP1-DAI\\TP1-DAI-.API.csproj": {}
+    "C:\\Users\\47296055\\TP1-DAI-UrielGonzalo\\TP1-DAI\\TP1-DAI-.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\47296055\\Documents\\TP1-DAI\\TP1-DAI\\TP1-DAI-.API.csproj": {
+    "C:\\Users\\47296055\\TP1-DAI-UrielGonzalo\\TP1-DAI\\TP1-DAI-.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\47296055\\Documents\\TP1-DAI\\TP1-DAI\\TP1-DAI-.API.csproj",
+        "projectUniqueName": "C:\\Users\\47296055\\TP1-DAI-UrielGonzalo\\TP1-DAI\\TP1-DAI-.API.csproj",
         "projectName": "TP1-DAI-.API",
-        "projectPath": "C:\\Users\\47296055\\Documents\\TP1-DAI\\TP1-DAI\\TP1-DAI-.API.csproj",
+        "projectPath": "C:\\Users\\47296055\\TP1-DAI-UrielGonzalo\\TP1-DAI\\TP1-DAI-.API.csproj",
         "packagesPath": "C:\\Users\\47296055\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\47296055\\Documents\\TP1-DAI\\TP1-DAI\\obj\\",
+        "outputPath": "C:\\Users\\47296055\\TP1-DAI-UrielGonzalo\\TP1-DAI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
