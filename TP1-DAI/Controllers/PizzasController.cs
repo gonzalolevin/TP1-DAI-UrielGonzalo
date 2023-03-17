@@ -28,10 +28,42 @@ namespace Pizzas.API.Controllers{
         }
 
         [HttpPost]
-        public IActionResult Create (Pizza pizzas)
+        public IActionResult Create (Pizza pizza)
         {
-            BD.CrearPizza(pizzas);
+            BD.CrearPizza(pizza);
             return Ok();
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, Pizza pizzaNueva)
+        {
+            if(id != pizzaNueva.Id)
+            {
+                return BadRequest();
+            }
+            Pizza pizzaVieja = BD.VerInfoPizza(id);
+            if(pizzaVieja == null)
+            {
+                return NotFound();
+            }
+            BD.ActualizarPizza(id, pizzaNueva);
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteById(int id)
+        {
+            if(id<1)
+            {
+                return BadRequest();
+            }
+            if(BD.EliminarPizza(id)==0)
+            {
+                return NotFound();
+            }
+            BD.EliminarPizza(id);
+            return Ok();
+
         }
 
         

@@ -6,7 +6,7 @@ using Dapper;
 
 public class BD {
 
-    private static string _connectionString =  @"Server=A-PHZ2-AMI-009;DataBase=DAI-Pizzas;Trusted_Connection=True;";
+    private static string _connectionString =  @"Server=A-PHZ2-CIDI-008;DataBase=DAI-Pizzas;Trusted_Connection=True;";
 
 
 public static List<Pizza> ListarPizzas(){
@@ -37,6 +37,25 @@ public static List<Pizza> ListarPizzas(){
         }
         return pizzas;
         
+    }
+
+    public static void ActualizarPizza(int id, Pizza pizza1) 
+    {
+        using(SqlConnection db = new SqlConnection(_connectionString))
+            {
+                db.Execute("UPDATE Pizza SET Nombre = @pNombre, LibreGluten =  @pLibreGluten, Importe =  @pImporte, Descripcion = @pDescripcion WHERE Id = @pId", 
+                new { pId = id, pNombre = pizza1.Nombre, pLibreGluten = pizza1.LibreGluten, pImporte = pizza1.Importe, pDescripcion = pizza1.Descripcion }); 
+            }
+    }
+
+    public static int EliminarPizza (int IdPizza){
+        int ejecutados = 0;
+        string SQL = "Delete from Pizza where IdPizza = @pId";
+        using(SqlConnection db = new SqlConnection(_connectionString)){       
+            ejecutados = db.Execute(SQL, new {pId = IdPizza});
+        }  
+        return ejecutados;   
+
     }
 
 }
